@@ -4,31 +4,58 @@ app.controller('ride1control', function($scope, mapservice) {
 
 var rides = [
               {
-                name: "Farm to (picnic)Table",
+                name: "Farm to Picnic Table",
                 area: "East and Riverfront",
                 miles: 11.4,
                 time: 64,
-                stops:  10,
-                waypoint1: "Market Sheds -apples, pears, grapes",
-                info1: "Sat 7a-4p, Sun 10a-4p, Tues 9a-3p (June-Oct)",
-                waypoint2: "DeVries & Co. 1887 - bread/crackers, cheese, sausage",
-                info2: "Tues-Fri 9a-5p, Sat 7a-4p",
-                waypoint3: "Germack Pistachio Co. - nuts, snacks",
-                info3: "Mon-Sat 8a-4:30p, Sun 10a-4p",
-                waypoint4: "CostPlus Wine - bottle of wine",
-                info4: "Tues-Fri 9a-6p, Sat 7:30a-4:30p",
-                waypoint5: "Sister Pie - dessert",
-                info5: "Tues-Fri 8a-6p, Sat-Sun 9a-4p",
-                waypoint6: "Belle Isle Aquarium",
-                info6: "Sat-Sun 10a-4p",
-                waypoint7: "Anna Scripps Whitcomb Conservatory",
-                info7: "Wed-Sun 10a-5p",
-                waypoint8: "Atwater Brewery",
-                info8: "Mon-Fri 5p-10p, Sat 9a-4p, Sun 12p-8p",
-                waypoint9: "Trinosophes - coffee and treats",
-                info9: "Tues-Fri 9a-6p, Sat 9a-4p, Sun 10a-4p", 
-                waypoint10:"Thomas McGee's Sporting House - adult beverages",
-                info10: "Mon 4p-2a, Tue-Fri 1p-2a, Sat 9a-2a, Sun 11a-2p "
+                stops:  9,
+                waypoints: [
+                  {
+                    name: "Eastern Market Sheds",
+                    hours: "Sat 7a-4p, Sun 10a-4p, Tues 9a-3p (June-Oct)",
+                    what: "Fresh Produce"
+                  },
+                  {
+                    name: "DeVries & Co. 1887",
+                    hours: "Tues-Fri 9a-5p, Sat 7a-4p",
+                    what: "Artisan Cheese"
+                  },
+                  {
+                    name: "Germack Pistachio Co.",
+                    hours: "Mon-Sat 8a-4:30p, Sun 10a-4p",
+                    what: "Nuts and Snacks"
+                  },
+                  {
+                    name: "CostPlus Wine",
+                    hours: "Tues-Fri 9a-6p, Sat 7:30a-4:30p",
+                    what: "Beer and Wine"
+                  },
+                  {
+                    name: "Sister Pie",
+                    hours: "Tues-Fri 8a-6p, Sat-Sun 9a-4p",
+                    what: "Baked Goods"
+                  },
+                  {
+                    name: "Belle Isle Aquarium",
+                    hours: "Sat-Sun 10a-4p",
+                    what: "Aquarium"
+                  },
+                  {
+                    name: "Anna Scripps Whitcomb Conservatory",
+                    hours: "Wed-Sun 10a-5p",
+                    what: "Conservatory and Botanical Gardens"
+                  },
+                  {
+                    name: "Atwater Brewery",
+                    hours: "Mon-Fri 5p-10p, Sat 9a-4p, Sun 12p-8p",
+                    what: "Craft Beer"
+                  },
+                  {
+                    name: "Trinosophes",
+                    hours: "Tues-Fri 9a-6p, Sat 9a-4p, Sun 10a-4p",
+                    what: "Coffee and Treats"
+                  }
+                ]
               },
               {
                 name: "Beers & Gears",
@@ -39,14 +66,14 @@ var rides = [
                 waypoint1: "Batch Brewing Company",
                 info1: "Mon-Thur 11a-10p, Fri-Sat 11a-12a",
                 waypoint2: "Atwater Brewery",
-                info2: "Mon-Fri 5p-10p, Sat 9a-4p, Sun 12p-8p"  
+                info2: "Mon-Fri 5p-10p, Sat 9a-4p, Sun 12p-8p"
               },
               {
                 name: "Trails & Cocktails",
                 area: "East and Downtown",
                 miles: 3.5,
                 time: 19,
-                stops: 3  
+                stops: 3
               },
               {
                 name: "Dine Fine & White Lines",
@@ -60,7 +87,7 @@ var rides = [
                 area: "Midtown",
                 miles: 3.7,
                 time: 23,
-                stops: 4  
+                stops: 4
               },
               {
                 name: "Corktown Classic",
@@ -74,49 +101,49 @@ var rides = [
                 area: "Southwest",
                 miles: 3,
                 time: 20,
-                stops: 3  
+                stops: 3
               },
               {
                 name: "Arts & Crafts",
                 area: "Midtown and East",
                 miles: 11.3,
-                time: 65, 
-                stops: 3  
+                time: 65,
+                stops: 3
               },
               {
                 name: "I Brake for Art",
                 area: "East and Downtown",
                 miles: 4.4,
                 time: 26,
-                stops: 5  
+                stops: 5
               },
               {
                 name: "Rockin' Roll",
                 area: "Midtown",
                 miles: 5.4,
                 time: 32,
-                stops: 3  
+                stops: 3
               },
               {
                 name: "Stadium Cycle",
                 area: "Downtown and Corktown",
                 miles: 4.6,
                 time: 32,
-                stops: 4  
-              }, 
+                stops: 4
+              },
               {
                 name: "Brunch on Bikes",
                 area: "East and Corktown",
                 miles: 6.3,
                 time: 32,
-                stops: 2  
+                stops: 2
               },
               {
                 name: "Sunset & Spokes",
                 area: "Corktown and Riverfront",
                 miles: 11.4,
                 time: 60,
-                stops:2 
+                stops:2
               }
             ];
 
@@ -125,4 +152,3 @@ var rides = [
   var initmap = mapservice;
   initmap();
 });
-
