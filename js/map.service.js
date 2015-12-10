@@ -3,7 +3,7 @@ var app = angular.module('myApp');
 app.factory('mapservice', function() {
   function initMap() {
     var pointA = new google.maps.LatLng(42.347702, -83.041534), // Eastern Market
-        pointB = new google.maps.LatLng(42.347702, -83.041534),
+        pointB = new google.maps.LatLng(42.344220, -83.037705), // Coffee
         waypts = [
                     {
                       location: new google.maps.LatLng(42.346173, -83.040392),
@@ -32,10 +32,6 @@ app.factory('mapservice', function() {
                     {
                       location: new google.maps.LatLng(42.337385, -83.018606),
                       stopover: true // Atwater
-                    },
-                    {
-                      location: new google.maps.LatLng(42.344220, -83.037705),
-                      stopover: true // Coffee
                     }
                 ],
         myOptions = {
@@ -46,18 +42,6 @@ app.factory('mapservice', function() {
         // Instantiate a directions service.
         directionsService = new google.maps.DirectionsService,
         directionsDisplay = new google.maps.DirectionsRenderer({
-          map: map
-        }),
-        markerA = new google.maps.Marker({
-          position: pointA,
-          title: "point A",
-          label: "A",
-          map: map
-        }),
-        markerB = new google.maps.Marker({
-          position: pointB,
-          title: "point B",
-          label: "B",
           map: map
         });
 
