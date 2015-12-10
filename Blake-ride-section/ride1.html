@@ -2,24 +2,25 @@
 <head>
 	<link rel="stylesheet"  href="ride1.css" >
 </head>
-
-<section id="ride1">
-	<div id ="ride1-container">
-		<div class="ridecol-left">
-			<h2>SoutWest Route</h2>
-			<div class="route">
-				<h4>Name: "Farm to (picnic)Table"</h4>
-					<p>Area: "East and Riverfront"</p>
-					<p>Miles: 11.4</p>
-					<p>Time: 64 </p>
-					<p>Stops: 10</p>
-				<h4>Description</h4>
-				<p>Insert description here....</p>
+<body>
+	<section id="ride1">
+		<div id ="ride1-container">
+			<div class="ridecol-top">
+				<h2 class="ride-title">Farm to PicnicTable</h2>
+				<div class="route">
+						<!-- <p>Area: "East and Riverfront"</p> -->
+						<span class="miles">11.4 mi</span>
+						<span class="time">64 min</span>
+						<span class="stops">10 stops</span>
+				</div>
+				<ng-view><img src="map.gif"></ng-view>
+			<div class="ridecol-bottom">
+				<h4 class="ride-description-title">description</h4>
+				<p class="ride-description">Insert desc here Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				</p>
 			</div>
-		<div class="ridecol-right">
-			<p>Title: If Needed</p>
-			<img src="map.gif">
 		</div>
-	</div>
-</section>
+	</section>
+</body>
 

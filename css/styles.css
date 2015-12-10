@@ -12,7 +12,7 @@ body {
   padding: 0;
 }
 #map {
-  height: 500px;
+  height: 150px;
   width: 50%;
   z-index: -1;
 }
@@ -88,4 +88,17 @@ section {
 }
 section h2 {
   text-align: center;
+}
+#ride1-container {
+  position: absolute;
+  width: 320px;
+  border: solid #000;
+}
+.ridecol-top,
+.ridecol-bottom {
+  border: solid #000 1px;
+  display: inline-block;
+}
+.route {
+  text-align: left;
 }
