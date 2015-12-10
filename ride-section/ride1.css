@@ -1,0 +1,28 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, ol, ul, li,table, caption, tbody, tfoot, 
+thead, tr, th, td, footer, header,
+menu, nav, section, {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+section#ride1{
+text-align: center;
+}
+
+#ride1-container{
+	position: absolute;
+	width: 320px;
+}
+
+.ridecol-left, .ridecol-right{
+	border: solid black 1px;
+	display: inline-block;
+}
+
+.route{
+	text-align: left;
+}
