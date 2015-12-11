@@ -78,5 +78,6 @@
 
   function displayOffer(response){
     console.log(response);
+    document.getElementById(rides).append("hey");
   }
 
