@@ -82,12 +82,15 @@ body {
   display: block;
 }
 section {
-  height: 640px;
+  height: 720px;
   width: 360px;
   padding-top: 60px;
 }
 section h2 {
   text-align: center;
+}
+#rides {
+  overflow: scroll;
 }
 #home div ul li {
   margin-left: 1.5em;
