@@ -2,37 +2,12 @@ var app = angular.module('myApp');
 
 app.controller('maincontroller', function($scope) {
 
-///////MODAL START
-  app.directive('modalDialog', function() {
-  return {
-    restrict: 'E',
-    scope: {
-      show: '='
-    },
-    replace: true, // Replace with the template below
-    transclude: true, // we want to insert custom content inside the directive
-    link: function(scope, element, attrs) {
-      scope.dialogStyle = {};
-      if (attrs.width)
-        scope.dialogStyle.width = attrs.width;
-      if (attrs.height)
-        scope.dialogStyle.height = attrs.height;
-      scope.hideModal = function() {
-        scope.show = false;
-      };
-    },
-    template: "<div class='ng-modal' ng-show='show'><div class='ng-modal-overlay' ng-click='hideModal()'></div><div class='ng-modal-dialog' ng-style='dialogStyle'><div class='ng-modal-close' ng-click='hideModal()'>X</div><div class='ng-modal-dialog-content' ng-transclude></div></div></div>"
-  };
-});
-////////MODAL FINISHED
-
 var rides = [
               {
                 name: "Farm to Picnic Table",
                 area: "East and Riverfront",
                 miles: 11.4,
                 time: 64,
-                description:"Gather your picnic at stops along the way then stop at Belle Isle",
                 stops:  9,
                 waypoints: [
                   {
@@ -88,7 +63,6 @@ var rides = [
                 miles: 6.2,
                 time: 32,
                 stops: 2,
-                description: "",
                 waypoint1: "Batch Brewing Company",
                 info1: "Mon-Thur 11a-10p, Fri-Sat 11a-12a",
                 waypoint2: "Atwater Brewery",
@@ -99,97 +73,80 @@ var rides = [
                 area: "East and Downtown",
                 miles: 3.5,
                 time: 19,
-                stops: 3,
-                description: ""
+                stops: 3
               },
               {
                 name: "Dine Fine & White Lines",
                 area: "Downtown",
                 miles: 1.5,
                 time: 13,
-                stops: 3,
-                description: ""
+                stops: 3
               },
               {
                 name: "Fresh Air & Casual Fare",
                 area: "Midtown",
                 miles: 3.7,
                 time: 23,
-                stops: 4,
-                description: ""
+                stops: 4
               },
               {
                 name: "Corktown Classic",
                 area: "Corktown",
                 miles: 2.3,
                 time: 14,
-                stops:  4,
-                description: ""
+                stops:  4
               },
               {
                 name: "Tacos & Tequila",
                 area: "Southwest",
                 miles: 3,
                 time: 20,
-                stops: 3,
-                description: ""
+                stops: 3
               },
               {
                 name: "Arts & Crafts",
                 area: "Midtown and East",
                 miles: 11.3,
                 time: 65,
-                stops: 3,
-                description: ""
+                stops: 3
               },
               {
                 name: "I Brake for Art",
                 area: "East and Downtown",
                 miles: 4.4,
                 time: 26,
-                stops: 5,
-                description: ""
+                stops: 5
               },
               {
                 name: "Rockin' Roll",
                 area: "Midtown",
                 miles: 5.4,
                 time: 32,
-                stops: 3,
-                description: ""
+                stops: 3
               },
               {
                 name: "Stadium Cycle",
                 area: "Downtown and Corktown",
                 miles: 4.6,
                 time: 32,
-                stops: 4,
-                description: ""
+                stops: 4
               },
               {
                 name: "Brunch on Bikes",
                 area: "East and Corktown",
                 miles: 6.3,
                 time: 32,
-                stops: 2,
-                description: ""
+                stops: 2
               },
               {
                 name: "Sunset & Spokes",
                 area: "Corktown and Riverfront",
                 miles: 11.4,
                 time: 60,
-                stops:2,
-                description: ""
+                stops:2
               }
             ];
 
   $scope.rides = rides;
-  ////modal
-  $scope.modalShown = false;
-  $scope.toggleModal = function() {
-    $scope.modalShown = !$scope.modalShown;
-  ////modal
-  };
 
 });
