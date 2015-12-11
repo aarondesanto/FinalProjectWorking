@@ -1,37 +1,17 @@
 <h4> Directions: </h4>
-	<ol>
-		<li> Sign in using Facebook for discounts& a personalized experience! (optional but highly recommended) </li>
-		<li> Browse available routes </li> 
-		<li> Select an interesting route to see more details </li>
-	</ol>		
-	<div id="routes">
-		<ul> ROUTES 			
-			<li> <a href="/ride1"> RIDE 1</a> </li>
-			<li> RIDE 2 </li>
-			<li> RIDE 3 </li> 
-			<li> RIDE 4 </li>
-			<li> RIDE 5 </li>
-		</ul>	
-	</div>
-	<div id="miles">
-		<ul> DISTANCE 
-		 	<li> MILEAGE </li>
-			<li> MILEAGE </li>
-			<li> MILEAGE</li> 
-			<li> MILEAGE</li>
-			<li> MILEAGE</li>
-		</ul>	
-	</div>
-	<div id="time">
-		<ul> HOURS
-		 	<li> TIME IN HOURS </li>
-			<li> TIME IN HOURS </li>
-			<li> TIME IN HOURS </li> 
-			<li> TIME IN HOURS </li>
-			<li> TIME IN HOURS </li>
-		</ul>	
-	</div>
-	<div id="login">	
-		<h3> Get personal with us & we'll give you discounts! </h3>
-		FACEBOOK LOGIN
-	</div>	 
+<ol>
+	<li> Sign in using Facebook for discounts & a personalized experience! (optional but highly recommended) </li>
+	<li> Browse available rides </li> 
+	<li> Select an interesting ride to see more details </li>
+</ol>
+
+<h2 class="ride-title"><a href="/ride1">{{rides[0].name}}</a></h2>
+		<div class="route">
+				<span class="area">{{rides[0].area}}</span>
+				<span class="miles">{{rides[0].miles}} mi</span>
+				<span class="time">{{rides[0].time}} min</span>
+				<span class="stops">{{rides[0].stops}} stops</span>
+				<span class="ride-description">Gather your picnic at stops along the way then stop at Belle Isle.</span>
+		</div>
+
+

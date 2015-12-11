@@ -151,4 +151,6 @@ var rides = [
 
   var initmap = mapservice;
   initmap();
+
+  console.log("hi");
 });
