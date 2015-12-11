@@ -9,6 +9,7 @@
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
       testAPI();
+      displayOffer(response);
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -78,5 +79,5 @@
 
   function displayOffer(response){
     console.log(response);
-    document.getElementById(rides).append("Hey");
+    alert("Welcome Blake DeBaske");
   }
