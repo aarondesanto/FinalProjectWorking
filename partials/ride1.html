@@ -1,23 +1,19 @@
-<div id ="ride1-container">
-	<div class="ridecol-top">
-		<h2 class="ride-title">{{rides[0].name}}</h2>
-		<div class="route">
-				<!-- <p>Area: "East and Riverfront"</p> -->
-				<span class="miles">{{rides[0].miles}} mi</span>
-				<span class="time">{{rides[0].time}} min</span>
-				<span class="stops">{{rides[0].stops}} stops</span>
-		</div>
-			<div id="map"></div>
-	<div class="ridecol-bottom">
-		<h4 class="ride-description-title">description</h4>
-		<p class="ride-description">Gather your picnic at stops along the way then stop at Belle Isle.</p>
-		<div class="ride-stops" ng-repeat="stop in rides[0].waypoints">
-			<p>{{stop.name}}</p>
-			<p>{{stop.hours}}</p>
-			<p>{{stop.what}}</p>
-		</div>
+<div class="ridecol-top">
+	<h2>{{rides[0].name}}</h2>
+	<div>
+		<!-- <p>Area: "East and Riverfront"</p> -->
+		<span>{{rides[0].miles}} mi</span>
+		<span>{{rides[0].time}} min</span>
+		<span>{{rides[0].stops}} stops</span>
+	</div>
+	<div id="map"></div>
+	<h4>description</h4>
+	<p>Gather your picnic at stops along the way then stop at Belle Isle.</p>
+	<div ng-repeat="stop in rides[0].waypoints">
+		<p>{{stop.name}}</p>
+		<p>{{stop.hours}}</p>
+		<p>{{stop.what}}</p>
 	</div>
 </div>
-
 
 <a href="/rideinfo">More Rides</a>
